@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Форма создания заметки -->
+        <div class="card">
+            <h2>Create New Note</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <input type="text" id="titleInput" placeholder="Note title" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="contentInput" placeholder="Note content" required></textarea>
+                </div>
+                <button type="submit">Create Note</button>
+            </form>
+        </div>
+
+        <!-- Панель управления -->
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search notes...">
+            <select id="sortSelect">
+                <option value="dateDesc">Newest first</option>
+                <option value="dateAsc">Oldest first</option>
+                <option value="titleAsc">Title (A-Z)</option>
+                <option value="titleDesc">Title (Z-A)</option>
+            </select>
+        </div>
+
+        <!-- Список заметок -->
+        <div id="notesContainer" class="notes-grid"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
